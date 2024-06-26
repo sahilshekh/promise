@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+</head>
+<style>
+  /* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#mainHeading {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+#guessDiv {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+#guesses, #remainingGuess {
+    font-weight: bold;
+}
+
+h2 {
+    color: #555;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+</style>
+<body>
+    <h1 id="mainHeading">Guess Number</h1>
+       <form>
+     <input type="text" id="Number">
+     <input type="button" id="submit" value="Submit"></input>
+       </form>
+       <div id="guessDiv">
+        <h2>Privious Guesses</h2><span id="guesses"></span>
+        <h2>Guess Remaining</h2><span id="remainingGuess"></span>
+       </div>
+       
+</body>
+<script src="./index.js"></script>
+</html>
