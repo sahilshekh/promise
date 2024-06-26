@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Removal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        #list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        #list li {
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        #list li:hover {
+            transform: scale(1.05);
+        }
+        #list img {
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li id="naturalPhotos">
+            <img src="https://img.freepik.com/free-photo/abstract-multi-colored-wave-pattern-shiny-flowing-modern-generated-by-ai_188544-15588.jpg?t=st=1719419498~exp=1719423098~hmac=8cf09dcf701d01ad5ae102d41a292b08a2ee60f1225c8196b1660314d896beeb&w=826" alt="Abstract Wave Pattern">
+        </li>
+        <li id="naturalPhotos2">
+            <img src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg" alt="Free Images">
+        </li>
+        <li id="naturalPhotos3">
+            <img src="https://www.shutterstock.com/shutterstock/photos/119831752/display_1500/stock-photo-lake-and-palms-mahe-island-seychelles-119831752.jpg" alt="Lake and Palms">
+        </li>
+        <li id="naturalPhotos4">
+            <img src="https://images.unsplash.com/photo-1420593248178-d88870618ca0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunset Over Mountains">
+        </li>
+        <li id="naturalPhotos5">
+            <img src="https://www.nature.com/immersive/d41586-019-00240-y/assets/75aab88c-0b6a-4d3f-8cf0-52d6ddf4f7c7.png" alt="Nature Image">
+        </li>
+        <li id="naturalPhotos6">
+            <img src="https://cdn.pixabay.com/photo/2020/02/29/12/13/landscape-4884261_1280.jpg" alt="Pixabay Landscape">
+        </li>
+        <li id="naturalPhotos7">
+            <img src="https://www.publicdomainpictures.net/pictures/320000/nahled/background-image.png" alt="Background Image">
+        </li>
+        <li id="naturalPhotos8">
+            <img src="https://www.w3schools.com/w3images/lights.jpg" alt="W3Schools Lights">
+        </li>
+    </ul>
+    <script>
+        const allList = document.getElementById("list");
+        allList.addEventListener("click", function(e) {
+            console.log(e.target.tagName);
+            if (e.target.tagName == "IMG") {
+                const targets = e.target.parentNode;
+                targets.remove();
+            }
+        });
+    </script>
+</body>
+</html>
